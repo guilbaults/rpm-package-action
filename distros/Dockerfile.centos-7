@@ -1,0 +1,18 @@
+FROM centos:7
+
+# Install the minimal packages to do the job.
+RUN    yum install -y \
+                   curl \
+                   git \
+                   glibc-static \
+                   rpm-build \
+                   rpm-sign \
+                   rpmdevtools \
+                   systemd \
+                   systemd-units \
+                   which \
+                   yum-utils
+
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
