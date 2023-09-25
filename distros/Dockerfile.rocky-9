@@ -10,7 +10,6 @@ RUN    dnf install -y \
                    epel-release \
     && dnf config-manager -y --enable crb \
     && dnf install -y \
-                   coreutils-single \
                    curl \
                    git \
                    glibc-static \
