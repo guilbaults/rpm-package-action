@@ -9,7 +9,7 @@ RUN    dnf install -y \
                    dnf-plugins-core \
                    epel-release \
     && dnf config-manager -y --enable crb \
-    && dnf install -y \
+    && dnf install --allowerasing -y \
                    curl \
                    git \
                    glibc-static \
